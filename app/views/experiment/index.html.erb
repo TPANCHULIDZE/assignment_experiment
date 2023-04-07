@@ -1,0 +1,19 @@
+<div>
+		<div>
+			<% if @plates %>
+				<div class="justify-content-around py-4 m-1 ml-10">
+					<% for plate in @plates %>
+						<div class="d-flex py-4 m-1"> 
+							<%= render 'plate', plate: plate %>
+						</div>
+					<% end %>
+				</div>
+			<% end %>
+
+			<% if @error %>
+			<div class="d-flex py-4 m-1"> 
+				<h1> <%= @error %> </h1>
+			</div>
+			<% end %>
+		</div>
+</div>
